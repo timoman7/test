@@ -29,6 +29,11 @@ function draw(){
 		for(var i=0;i<fileToGet.rows[0].arr.length;i++){
 			tasks[fileToGet.rows[0].arr[i]]=[];
 		}
+		tasks["Image Name"]=[];
+		tasks["PID"][i]=[];
+		tasks["Session Name"][i]=[];
+		tasks["Session#"][i]=[];
+		tasks["Mem Usage"][i]=[];
 		for(var i = 1;i<fileToGet.getRowCount();i++){
 			var row=fileToGet.rows[i].arr;
 			var ImageName=row[0];
@@ -36,11 +41,11 @@ function draw(){
 			var SessionName=row[2];
 			var SessionNum=row[3];
 			var MemUsage=row[4];
-			tasks["Image Name"][i]=ImageName;
-			tasks["PID"][i]=PID;
-			tasks["Session Name"][i]=SessionName;
-			tasks["Session#"][i]=SessionNum;
-			tasks["Mem Usage"][i]=MemUsage;
+			tasks["Image Name"].push(ImageName);
+			tasks["PID"][i].push(PID);
+			tasks["Session Name"].push(SessionName);
+			tasks["Session#"].push(SessionNum);
+			tasks["Mem Usage"].push(MemUsage);
 		}
 		console.log(tasks);
 		background(255);
