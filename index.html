@@ -25,10 +25,11 @@ function setup(){
 	}
 }
 function draw(){
-	if(frameCount%200==0){
+	if(frameCount%20==0){
 		$.getJSON('//api.ipify.org?format=jsonp&callback=?', function(data) {
-			console.log(JSON.stringify(data, null, 2));
+			userIP=data.ip;
 		});
+		document.getElementById("myTitle").innerHTML="Task Manager for "+userIP;
 	}
 	if(frameCount%100==0){
 		fileToGet=loadTable("yes.txt","CSV");
