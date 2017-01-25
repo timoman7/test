@@ -12,6 +12,9 @@
 <script type="text/javascript">
 var fileToGet;
 var tasks = {};
+function preload(){
+	fileToGet=loadTable("yes.txt","CSV");
+}
 function setup(){
 	fileToGet=loadTable("yes.txt","CSV");
 	for(var i=0;i<fileToGet.rows[0].arr.length;i++){
