@@ -16,7 +16,6 @@ function preload(){
 	fileToGet=loadTable("yes.txt","CSV");
 }
 function setup(){
-	fileToGet=loadTable("yes.txt","CSV");
 	for(var i=0;i<fileToGet.rows[0].arr.length;i++){
 		tasks[fileToGet.rows[0].arr[i]]=[];
 	}
