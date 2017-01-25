@@ -16,7 +16,7 @@ function preload(){
 	fileToGet=loadTable("yes.txt","CSV");
 }
 function setup(){
-	createCanvas(800,800);
+	createCanvas(window.windowWindow,window.windowHeight);
 	background(255);
 	for(var i=0;i<fileToGet.rows[0].arr.length;i++){
 		tasks[fileToGet.rows[0].arr[i]]=[];
@@ -50,12 +50,16 @@ function draw(){
 			tasks["Mem Usage"].push(MemUsage);
 		}
 		background(255);
+		var cc=0;
+		for(var h in tasks){
+			cc++;
+		}
 		var counter=0;
 		for(var h in tasks){
 			fill(0);
-			text(h,10+(counter*100),20);
+			text(h,10+(counter*(window.windowWidth/cc)),20);
 			for(var i=0;i<tasks[h].length;i++){
-				text(tasks[h][i],10+(counter*100),40+(i*20));
+				text(tasks[h][i],10+(counter*(window.windowWidth/cc)),40+(i*20));
 			}
 			counter++;
 		}
