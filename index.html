@@ -41,7 +41,12 @@ function draw(){
 			tasks["Mem Usage"]=MemUsage;
 		}
 	}
-	console.log(tasks);
+	background(255);
+	var counter=0;
+	for(var h in tasks){
+		fill(0);
+		text(h,10+(counter*40),20);
+	}
 }
 
 </script>
