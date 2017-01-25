@@ -58,6 +58,7 @@ function draw(){
 			tasks["Session#"].push(SessionNum);
 			tasks["Mem Usage"].push(MemUsage);
 		}
+		newCanvas.size(window.windowWidth,20+(tasks["Image Name"].length*20));
 		background(255);
 		var cc=0;
 		for(var h in tasks){
