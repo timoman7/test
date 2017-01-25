@@ -49,14 +49,13 @@ function draw(){
 			tasks["Session#"].push(SessionNum);
 			tasks["Mem Usage"].push(MemUsage);
 		}
-		console.log(tasks);
 		background(255);
 		var counter=0;
 		for(var h in tasks){
 			fill(0);
-			text(h,10+(counter*40),20);
+			text(h,10+(counter*100),20);
 			for(var i=0;i<tasks[h].length;i++){
-				text(tasks[h][i],10+(counter*40),40+(i*20));
+				text(tasks[h][i],10+(counter*100),40+(i*20));
 			}
 			counter++;
 		}
