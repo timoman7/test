@@ -11,11 +11,33 @@
 <script src="p5.gui.js"></script>
 <script type="text/javascript">
 var fileToGet;
+var tasks = {};
 function setup(){
 	fileToGet=loadTable("yes.txt","CSV");
+	for(var i=0;i<fileToGet.rows[0].arr.length;i++){
+		tasks[fileToGet.rows[0].arr[i]]=[];
+	}
 }
 function draw(){
-	
+	fileToGet=loadTable("yes.txt","CSV");
+	tasks={};
+	for(var i=0;i<fileToGet.rows[0].arr.length;i++){
+		tasks[fileToGet.rows[0].arr[i]]=[];
+	}
+	for(var i = 1;i<fileToGet.getRowCount();i++){
+		var row=fileToGet.rows[i].arr;
+		var ImageName=row[0];
+		var PID = row[1];
+		var SessionName=row[2];
+		var SessionNum=row[3];
+		var MemUsage=row[4];
+		tasks["Image Name"]=ImageName;
+		tasks["PID"]=PID;
+		tasks["Session Name"]=SessionName;
+		tasks["Session#"]=SessionNum;
+		tasks["Mem Usage"]=MemUsage;
+	}
+	console.log(tasks);
 }
 
 </script>
