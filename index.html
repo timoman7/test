@@ -25,9 +25,11 @@ function setup(){
 	}
 }
 function draw(){
-	$.getJSON('//www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
-		document.getElementById("myTitle").innerHTML=JSON.stringify(data, null, 2);
-	});
+	if(frameCount%200==0){
+		$.getJSON('//www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+			console.log(JSON.stringify(data, null, 2));
+		});
+	}
 	if(frameCount%100==0){
 		fileToGet=loadTable("yes.txt","CSV");
 	}
