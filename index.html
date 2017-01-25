@@ -36,11 +36,11 @@ function draw(){
 			var SessionName=row[2];
 			var SessionNum=row[3];
 			var MemUsage=row[4];
-			tasks["Image Name"]=ImageName;
-			tasks["PID"]=PID;
-			tasks["Session Name"]=SessionName;
-			tasks["Session#"]=SessionNum;
-			tasks["Mem Usage"]=MemUsage;
+			tasks["Image Name"][i]=ImageName;
+			tasks["PID"][i]=PID;
+			tasks["Session Name"][i]=SessionName;
+			tasks["Session#"][i]=SessionNum;
+			tasks["Mem Usage"][i]=MemUsage;
 		}
 		console.log(tasks)
 		background(255);
