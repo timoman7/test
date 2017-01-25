@@ -54,6 +54,9 @@ function draw(){
 			fill(0);
 			text(h,10+(counter*40),20);
 			counter++;
+			for(var i=0;i<tasks[h].length;i++){
+				text(tasks[h][i],10+(counter*40),40+(i*20));
+			}
 		}
 	}
 	
