@@ -12,12 +12,7 @@
 <script type="text/javascript">
 var fileToGet;
 function setup(){
-	var path = location.pathname.split("/");
-	var fileP="file:/";
-	for(var i = 0; i < path.length-1; i++){
-		fileP+="/"+path[i];
-	}
-	fileToGet=loadTable(fileP+"/yes.txt","CSV");
+	fileToGet=loadTable("yes.txt","CSV");
 }
 function draw(){
 	
