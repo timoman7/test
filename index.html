@@ -59,7 +59,11 @@ function draw(){
 		for(var h in tasks){
 			cc++;
 		}
-		newCanvas.size(10+(cc*300),20+(tasks["Image Name"].length*20));
+		if(width>(10+(cc*300))){
+			newCanvas.size(window.windowWidth,20+(tasks["Image Name"].length*20));
+		}else{}
+			newCanvas.size(10+(cc*300),20+(tasks["Image Name"].length*20));
+		}
 		var counter=0;
 		for(var h in tasks){
 			fill(0);
