@@ -47,7 +47,15 @@ if ($env:github_shell -eq $null) {
   Pop-Location
 
 } else { Write-Verbose "GitHub shell environment already setup" }
+<<<<<<< HEAD
 cd C:\Users\tc20791\Desktop\test
 
 git commit -a --no-verify --allow-empty-message --no-edit
 git push
+=======
+$currentUser = (whoami /fqdn).split(",")[0].split("=")[1]
+cd C:\Users\$currentUser\Desktop\test
+
+git commit --no-verify -a --allow-empty-message --no-edit
+git push
+>>>>>>> 4b0dcdacc7ed7e9a581d2839262609f94ae8f3ba

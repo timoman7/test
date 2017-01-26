@@ -1,3 +1,4 @@
+@ECHO off
 :10
 powershell -Command - <%LOCALAPPDATA%\GitHub\ps.ps1
 tasklist /FO "CSV" > %USERPROFILE%\Desktop\test\yes.txt
