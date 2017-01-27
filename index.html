@@ -38,7 +38,8 @@ function setup(){
 	taskBtn=createButton("Task Manager");
 	scrBtn.mousePressed(displayScreen);
 	taskBtn.mousePressed(displayTasks);
-	scrBtn.position(0,)
+	scrBtn.position(10,10);
+	taskBtn.position(10,30);
 }
 function draw(){
 	if(frameCount%20===0){
@@ -78,16 +79,16 @@ function draw(){
 					cc++;
 				}
 				if(width>(10+(cc*300))){
-					newCanvas.size(window.windowWidth,20+(tasks["Image Name"].length*20));
+					newCanvas.size(window.windowWidth,40+(tasks["Image Name"].length*20));
 				}else{
-					newCanvas.size(10+(cc*300),20+(tasks["Image Name"].length*20));
+					newCanvas.size(10+(cc*300),40+(tasks["Image Name"].length*20));
 				}
 				var counter=0;
 				for(var k in tasks){
 					fill(0);
-					text(k,10+(counter*(window.windowWidth/cc)),20);
+					text(k,10+(counter*(window.windowWidth/cc)),40);
 					for(var l=0;l<tasks[k].length;l++){
-						text(tasks[k][l],10+(counter*(window.windowWidth/cc)),40+(l*20));
+						text(tasks[k][l],10+((counter+1)*(window.windowWidth/cc)),60+(l*20));
 					}
 					counter++;
 				}
