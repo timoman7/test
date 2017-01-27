@@ -1,0 +1,6 @@
+cd ~
+cd Desktop
+cd test
+git add .
+git commit -a --no-verify --allow-empty-message --no-edit
+git push --all
