@@ -26,6 +26,7 @@ IF ___taskL EQU ___myvar (
 IF /I ___taskL NEQ ___myvar (
 	echo Copying
 	copy %USERPROFILE%\Desktop\test\tempTxt.txt %USERPROFILE%\Desktop\test\yes.txt
+	powershell -Command - <screencap.ps1
 	git add .
 	git commit -a --no-verify --allow-empty-message --no-edit
 	git push --all
