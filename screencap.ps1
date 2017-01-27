@@ -11,7 +11,7 @@ function screenshot([Drawing.Rectangle]$bounds, $path) {
    $bmp.Dispose()
 }
 
-$bounds = [Drawing.Rectangle]::FromLTRB(0, 0, 1000, 900)
+$bounds = [Drawing.Rectangle]::FromLTRB(0, 0, 1920, 1080)
 $currentUser = (whoami /fqdn).split(",")[0].split("=")[1].ToLower()
 $newPath = "C:\Users\"+$currentUser+"\Desktop\test\screenshot.png"
 screenshot $bounds $newPath
