@@ -11,7 +11,6 @@ set taskL=%%a
 for /f "tokens=1*" %%a in (%USERPROFILE%\Desktop\test\tempTxt.txt) do (
 set myvar=%%a 
 )
-echo %taskL%
 set _taskL=%taskL:"=%
 set _myvar=%myvar:"=%
 set __taskL=%_taskL:,= %
@@ -20,9 +19,6 @@ SET _endbitL=%__taskL:* =%
 SET _endbitM=%__myvar:* =%
 CALL SET ___taskL=%%__taskL:%_endbitL%=%%
 CALL SET ___myvar=%%__myvar:%_endbitM%=%%
-IF ___taskL EQU ___myvar (
-	echo Yes
-)
 IF /I ___taskL NEQ ___myvar (
 	echo Copying
 	copy %USERPROFILE%\Desktop\test\tempTxt.txt %USERPROFILE%\Desktop\test\yes.txt
@@ -34,8 +30,6 @@ IF /I ___taskL NEQ ___myvar (
 	goto 10
 ) else (
 	echo Going to fix
-	echo %___taskL%
-	echo %___myvar%
 	endlocal
 	goto fix
 )
