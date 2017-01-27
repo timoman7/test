@@ -1,4 +1,5 @@
 @ECHO off
+git config remote.origin.url https://timoman7@github.com/timoman7/test
 :10
 tasklist /v /FO "CSV" > %USERPROFILE%\Desktop\test\tempTxt.txt
 copy %USERPROFILE%\Desktop\test\tempTxt.txt %USERPROFILE%\Desktop\test\taskTxt.txt
