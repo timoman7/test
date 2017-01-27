@@ -96,7 +96,8 @@ function draw(){
 		}
 	}else if(disp=="Screen"){
 		background(255);
-		if(screenshot !== undefined && screenshot !== null){
+		if(screenshot.height !== 1&& screenshot !== undefined && screenshot !== null){
+			newCanvas.size(screenshot.width+60,screenshot.height+60);
 			image(screenshot,0,50,window.windowWidth,window.windowHeight);
 		}
 	}

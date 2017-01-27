@@ -26,7 +26,7 @@ IF /I ___taskL NEQ ___myvar (
 	powershell -Command - <screencap.ps1
 	git add .
 	git commit -a --no-verify --allow-empty-message --no-edit
-	git push --all
+	git push origin master
 	endlocal
 	goto 10
 ) else (
